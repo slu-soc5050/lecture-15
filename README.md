@@ -13,7 +13,9 @@ This is the repository for Lecture 15 of the Saint Louis University course SOC 4
 ### Lecture Objectives
 At the end of this lecture and its corresponding assignments, students should be able to:
 
-1.
+1. Compare summary statistics caluclated using a grouping variable.
+2. Estimate a one-way ANOVA model to identify mean differeces between categories.
+3. Evaluate the assumptions of a one-way ANOVA model.
 
 ### Lecture Resources
 

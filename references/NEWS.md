@@ -1,4 +1,4 @@
-# lecture-15 v18.1.0.9000
+# lecture-15 v18.2.0
 
 * Initial repo setup:
     * Add `.github/` directory with community documents
@@ -12,3 +12,6 @@
 
 * Update `.github/` documents to latest community standards
 * Add `remotes` and `usethis` packages as dependencies
+
+* Add lab and handouts
+* Add extra `.tex` files for lab and handouts
