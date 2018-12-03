@@ -1,0 +1,83 @@
+\documentclass{tufte-handout}
+
+\usepackage{xcolor}
+
+% set image attributes:
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% set hyperlink attributes
+\hypersetup{colorlinks}
+
+% create environment for bottom paragraph:
+\newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
+
+\usepackage{enumerate}
+
+% set table attributes
+\usepackage{tabu}
+\usepackage{booktabs}
+
+% ============================================================
+
+% define the title
+\title{SOC 4015/5050: Lab-14 - ANOVA}
+\author{Christopher Prener, Ph.D.}
+\date{Fall 2018}
+
+% ============================================================
+
+\begin{document}
+
+% ============================================================
+
+\maketitle % generates the title
+
+% ============================================================
+
+\vspace{5mm}
+\section{Directions}
+Please complete all steps below. All work should be uploaded to your GitHub assignment repository by 4:15pm on Monday, December 10\textsuperscript{th}, 2018. All data can be obtained from the \texttt{testDriveR} package's \texttt{auto17} data set.
+
+\vspace{5mm}
+\section{Analysis Development}
+Using RStudio and your operating system's file manager, create an R Project in the \textit{existing} directory in your assignments repository named \texttt{Lab-14}. Add a \texttt{README.md} file, notebook, and all necessary folders before beginning.\sidenote{This initial section follows the project workflow that is available in the \texttt{lecture-03} repo!}
+
+\vspace{3mm}
+\section{Part 1: Data Preparation and Plotting}
+\begin{enumerate}
+\item Subset your data so that it contains only the \texttt{id}, \texttt{hwyFE}, and \texttt{driveStr2} variables.
+\item Convert the variable \texttt{driveStr2} to a factor using \texttt{as.factor()} embedded in a \texttt{mutate()} call: 
+\begin{verbatim}
+> x <- mutate(x, aFac = as.factor(a))
+\end{verbatim}
+\item Create a well-formatted violin plot \textit{or} box plot of the differences in highway fuel efficiency between vehicles based on their drivetrain using your \textit{factor} variable you created above.
+\item Calculate the mean highway fuel efficiency for each group within the factor variable you created above representing drivetrain.\sidenote{\textit{Hint}: Use the \texttt{group\_by()} and \texttt{summarize()} functions from \texttt{dplyr}!}
+\end{enumerate}
+
+\vspace{3mm}
+\section{Part 2: Assess Assumptions}
+Using the data created in Part 1, answer the following questions. Use highway fuel efficiency as your dependent variable and the factor variable you created above representing drivetrain type as your independent variable.
+\begin{enumerate}
+\setcounter{enumi}{4}
+\item Check the homogeneity of variance assumption using the Bartlett Test.
+\item Check the normality assumption using the standard techniques we've used this semester.
+\end{enumerate}
+
+\vspace{3mm}
+\section{Part 3: Fit the ANOVA} 
+\begin{enumerate}
+\setcounter{enumi}{6}
+\item Fit and interpret the results of an ANOVA using the highway fuel efficiency as your dependent variable and the factor variable you created above representing drivetrain type as your independent variable.
+\item Use Tukey HSD values to report which of the permutations have statistically significant differences in means. 
+\end{enumerate}
+
+\vspace{3mm}
+\section{Part 4: Check for Outliers}
+\begin{enumerate}
+\setcounter{enumi}{8}
+\item Use the Bonferonni Test to identify any outliers in the model.
+\end{enumerate}
+
+% ============================================================
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass{tufte-handout}
+
+\usepackage{xcolor}
+
+% set hyperlink attributes
+\hypersetup{colorlinks}
+
+% set image attributes:
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% indent subsections
+\newenvironment{subs}
+  {\adjustwidth{3em}{0pt}}
+  {\endadjustwidth}
+
+
+% ============================================================
+
+% define the title
+\title{SOC 4930/5050: Lecture 15 Functions}
+\author{Christopher Prener, Ph.D.}
+\date{Fall 2018}
+% ============================================================
+\begin{document}
+% ============================================================
+\maketitle % generates the title
+% ============================================================
+
+\vspace{5mm}
+\section{Packages}
+\begin{itemize}
+\item \texttt{dplyr}
+\item \texttt{stats}
+\end{itemize}
+
+\vspace{5mm}
+\section{Summarizing Values}
+\begin{subs}
+\subsection{Grouping by Value}
+\noindent \texttt{dplyr::}{\color{red}\texttt{group\_by}}\texttt{(\textit{dataFrame}, \textit{varName})}
+
+\vspace{3mm}
+\subsection{Summarize Values}
+\noindent \texttt{dplyr::}{\color{red}\texttt{summarize}}\texttt{(\textit{dataFrame}, \textit{newVar} = \textit{sumFun})}
+
+\vspace{3mm}
+\subsection{Summary Functions}
+\noindent I've linked to the RStudio data wrangling cheatsheet on the website, which includes a full list of available summary functions
+\end{subs}
+
+\vspace{5mm}
+\section{One-way ANOVA}
+\noindent \texttt{stats::}{\color{red}\texttt{aov}}\texttt{(\textit{yvar} \textasciitilde\ \textit{xvar}, data = \textit{dataFrame})}
+
+\vspace{5mm}
+\section{Tukey Honest Significant Differences }
+\noindent \texttt{stats::}{\color{red}\texttt{TukeyHSD}}\texttt{(\textit{model})}
+
+\vspace{5mm}
+\section{Bartlett Test}
+\noindent \texttt{stats::}{\color{red}\texttt{bartlett.test}}\texttt{(\textit{yvar} \textasciitilde\ \textit{xvar}, data = \textit{dataFrame})}
+
+% ============================================================
+\end{document}
