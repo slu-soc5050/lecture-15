@@ -1,3 +1,7 @@
+# lecture-15 v18.3.0
+
+* add lab replication
+
 # lecture-15 v18.2.0
 
 * Initial repo setup:
